@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class CountEvenOdd {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Print name and roll number
+        System.out.println("Name: lalita");
+        System.out.println("Roll No.: 24csu278");
+        System.out.println("----------------------");
+
+
+        // Input array size
+        System.out.print("Enter number of elements in array: ");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+
+        // Input array elements
+        System.out.println("Enter " + n + " elements:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        // Count even and odd numbers
+        int evenCount = 0, oddCount = 0;
+        for (int num : arr) {
+            if (num % 2 == 0) {
+                evenCount++;
+            } else {
+                oddCount++;
+            }
+        }
+
+        // Display results
+        System.out.println("\nLength of array: " + arr.length);
+        System.out.println("Even numbers: " + evenCount);
+        System.out.println("Odd numbers: " + oddCount);
+
+        sc.close();
+    }
+}
